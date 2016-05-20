@@ -1,0 +1,19 @@
+总共包含三个模块：恶意网站防护模块、SYNflood防护模块、DDOS检测模块
+还有两个使用到的数据结构的实现
+DDOS检测使用到三种方法：基于流量、基于信息熵、基于自相似
+实现主机发送数据包和接收数据包
+实现将数据打印成图像
+
+
+相关代码文件功能：
+mytext1 是用mininet建立拓扑结构
+text1 是设置Ryu监视器，接收交换机的统计信息
+simple_switch_13是实现交换机的功能，并且恶意网站和SYNflood防护模块都在这里
+send 可以发送DNS请求或者SYN请求
+receive 完成SYNflood防护中代理服务器的功能
+mattext 将收集的数据以图像方式输出
+clearmat 清空收集的数据图像
+flowcheck 基于流量特征的DDOS检测
+checkshannon 基于信息熵的DDOS检测
+checkhurst 基于流量自相似性的DDOS检测
+BKtree CountingBloomFilter 实现两种数据结构
